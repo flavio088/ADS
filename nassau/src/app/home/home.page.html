@@ -1,0 +1,39 @@
+<ion-header>
+<ion-toolbar>
+  <ion-title>Header</ion-title>
+</ion-toolbar>
+</ion-header>
+<ion-content>
+  <article>
+    <ion-title> variavel de template</ion-title>
+     <p>{{ guardaTexto }}</p>
+  <input type="text" class="abc" #texto (keyup)= "imprime(texto.className)">
+</article>
+<article>
+  <select #tema (change)="mudaTema(tema.value)">
+    <option value="tema1">tema 1</option>
+    <option value="tema2">tema 2</option>
+    <option value="tema3">tema 3</option>
+  </select>
+  <p [class]="guardaTema">Lorem ipsum dolor sit amet consectetur
+     adipisicing elit. Necessitatibus, quaerat volupt
+     atem. Labore dolorem rem nihil vitae laborum ea consequatur, 
+     maiores qui eos, ipsam nesciunt vero alias explicabo molestias? 
+     Esse, perspiciatis?</p>
+</article>
+<article>
+  <input type="text" #cor (keyup.enter)="mudaCor(cor.value)">
+  <input type="text" #fonte (keyup.enter)="mudaFonte(fonte.value)">
+  <input type="text" #tamanho (keyup.enter)="mudaTamanho(tamanho.value)">
+  <p
+   [style.color]="guardaCor"
+   [style.font-family]="guardaFonte"
+   [style.fontSize]="guardaTamanho"
+  >Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  Dignissimos, ipsam repellat laborum incidunt 
+  saepe quidem vitae! Sunt necessitatibus vero voluptate laudant
+  ium suscipit pariatur, modi quis aspernatur, exercitationem consequuntur, earum corrupti?
+
+  </p>
+</article>
+</ion-content>
